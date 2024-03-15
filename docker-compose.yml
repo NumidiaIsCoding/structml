@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  mydatabase:
+    image: postgres:14.11
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=structmldb
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - ./data:/var/lib/postgresql/data
+      - ./init-scripts:/docker-entrypoint-initdb.d
+      - ./csv-data:/usr/local/csv-data
