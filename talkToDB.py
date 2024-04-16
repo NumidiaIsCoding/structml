@@ -25,11 +25,11 @@ openai_api_key = load_api_key()
 # Créer une instance de ChatOpenAI avec la clé API chargée.
 llm = ChatOpenAI(model = 'gpt-3.5-turbo-0125',temperature=0, openai_api_key=openai_api_key)
 
-host = "localhost"
-port = "5432"
-username = "eric"
-password = "password"
-database_schema = "structmldb"
+host = "xxx"
+port = "xxx"
+username = "xxx"
+password = "xxx"
+database_schema = "xxx"
 postgreSQL_uri = f"postgresql+psycopg2://{username}:{password}@{host}:{port}/{database_schema}"
 
 db = SQLDatabase.from_uri(postgreSQL_uri, include_tables=['report_drug_indication', 'drug_product_ingredients'], sample_rows_in_table_info=5)
